@@ -33,6 +33,21 @@ deploy your contract:
 npx hardhat run scripts/deploy.js --network localhost
 ```
 
+You can use env variables and deploy to other networks too.
+Delete the ".example" from the .env.example
+
+Try with Sepolia or holesky if you have eth on this chains, try:
+
+```sh
+npx hardhat run scripts/deploy.js --network sepolia
+```
+
+You could verify the contracts in etherscan with this command:
+
+```sh
+npx hardhat verify --network sepolia <ContractAddress>
+```
+
 Finally, we can run the frontend with:
 
 ```sh
@@ -49,11 +64,11 @@ need to have [Coinbase Wallet](https://www.coinbase.com/wallet) or [Metamask](ht
 
 You can find detailed instructions on using this repository and many tips in [its documentation](https://hardhat.org/tutorial).
 
-- [Writing and compiling contracts](https://hardhat.org/tutorial/writing-and-compiling-contracts/)
-- [Setting up the environment](https://hardhat.org/tutorial/setting-up-the-environment/)
-- [Testing Contracts](https://hardhat.org/tutorial/testing-contracts/)
-- [Setting up your wallet](https://hardhat.org/tutorial/boilerplate-project#how-to-use-it)
-- [Hardhat's full documentation](https://hardhat.org/docs/)
+-   [Writing and compiling contracts](https://hardhat.org/tutorial/writing-and-compiling-contracts/)
+-   [Setting up the environment](https://hardhat.org/tutorial/setting-up-the-environment/)
+-   [Testing Contracts](https://hardhat.org/tutorial/testing-contracts/)
+-   [Setting up your wallet](https://hardhat.org/tutorial/boilerplate-project#how-to-use-it)
+-   [Hardhat's full documentation](https://hardhat.org/docs/)
 
 For a complete introduction to Hardhat, refer to [this guide](https://hardhat.org/getting-started/#overview).
 
@@ -61,21 +76,21 @@ For a complete introduction to Hardhat, refer to [this guide](https://hardhat.or
 
 This repository uses our recommended hardhat setup, by using our [`@nomicfoundation/hardhat-toolbox`](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-toolbox). When you use this plugin, you'll be able to:
 
-- Deploy and interact with your contracts using [ethers.js](https://docs.ethers.io/v5/) and the [`hardhat-ethers`](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-ethers) plugin.
-- Test your contracts with [Mocha](https://mochajs.org/), [Chai](https://chaijs.com/) and our own [Hardhat Chai Matchers](https://hardhat.org/hardhat-chai-matchers) plugin.
-- Interact with Hardhat Network with our [Hardhat Network Helpers](https://hardhat.org/hardhat-network-helpers).
-- Verify the source code of your contracts with the [hardhat-etherscan](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-etherscan) plugin.
-- Get metrics on the gas used by your contracts with the [hardhat-gas-reporter](https://github.com/cgewecke/hardhat-gas-reporter) plugin.
-- Measure your tests coverage with [solidity-coverage](https://github.com/sc-forks/solidity-coverage).
+-   Deploy and interact with your contracts using [ethers.js](https://docs.ethers.io/v5/) and the [`hardhat-ethers`](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-ethers) plugin.
+-   Test your contracts with [Mocha](https://mochajs.org/), [Chai](https://chaijs.com/) and our own [Hardhat Chai Matchers](https://hardhat.org/hardhat-chai-matchers) plugin.
+-   Interact with Hardhat Network with our [Hardhat Network Helpers](https://hardhat.org/hardhat-network-helpers).
+-   Verify the source code of your contracts with the [hardhat-etherscan](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-etherscan) plugin.
+-   Get metrics on the gas used by your contracts with the [hardhat-gas-reporter](https://github.com/cgewecke/hardhat-gas-reporter) plugin.
+-   Measure your tests coverage with [solidity-coverage](https://github.com/sc-forks/solidity-coverage).
 
 This project also includes [a sample frontend/Dapp](./frontend), which uses [Create React App](https://github.com/facebook/create-react-app).
 
 ## Troubleshooting
 
-- `Invalid nonce` errors: if you are seeing this error on the `npx hardhat node`
-  console, try resetting your Metamask account. This will reset the account's
-  transaction history and also the nonce. Open Metamask, click on your account
-  followed by `Settings > Advanced > Clear activity tab data`.
+-   `Invalid nonce` errors: if you are seeing this error on the `npx hardhat node`
+    console, try resetting your Metamask account. This will reset the account's
+    transaction history and also the nonce. Open Metamask, click on your account
+    followed by `Settings > Advanced > Clear activity tab data`.
 
 ## Setting up your editor
 
